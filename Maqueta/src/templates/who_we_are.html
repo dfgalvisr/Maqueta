@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maqueta</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/base.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-gray-200 border-b p-3">
+        <div class="container mx-auto flex justify-between items-center">
+
+            <nav class="flex items-center space-x-4">
+                <a href="./base.html">
+                    <img src="../assets/img/logo.png" alt="Logo de la Empresa" class="h-8 w-auto">
+                </a>
+                <a href="./who_we_are.html" class="text-gray-800 hover:text-gray-600 hidden sm:inline">¿Quiénes
+                    somos?</a>
+
+                <a href="./products_and_services.html"
+                    class="text-gray-800 hover:text-gray-600 hidden sm:inline">Productos</a>
+
+                <a href="./projects.html" class="text-gray-800 hover:text-gray-600 hidden sm:inline">Proyectos</a>
+
+            </nav>
+
+            <!-- Icono de menú y carrito para móviles -->
+            <div class="flex space-x-4 md:hidden">
+                <!-- Menú hamburguesa -->
+                <button id="menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navegación (oculta en móviles) -->
+            <nav class="hidden md:flex space-x-4">
+                <a href="./contact_us.html" class="text-gray-800 hover:text-gray-600 hidden sm:inline">Contactenos</a>
+                <a href="./login.html" class="text-gray-800 hover:text-gray-600">Iniciar sesión</a>
+            </nav>
+        </div>
+
+        <!-- Menú desplegable en móviles -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-100">
+            <nav class="flex flex-col p-4 space-y-2">
+                <a href="./login.html" class="text-gray-800 hover:text-gray-600">Iniciar sesión</a>
+                <hr>
+                <a href="./contact_us.html" class="text-gray-800 hover:text-gray-600">Contactenos</a>
+                <a href="./who_we_are.html" class="text-gray-800 hover:text-gray-600">¿Quiénes
+                    somos?</a>
+                <a href="./products_and_services.html" class="text-gray-800 hover:text-gray-600">Productos</a>
+                <a href="./projects.html" class="text-gray-800 hover:text-gray-600">Proyectos</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto p-6 m-10 space-y-8">
+        <!-- Historia -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl text-center font-bold text-gray-800 mb-4">Historia</h2>
+            <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget justo ut risus ullamcorper
+                tincidunt. Curabitur ac vehicula nunc, non sollicitudin augue. Integer ut erat sit amet sapien molestie
+                gravida.
+            </p>
+        </section>
+
+        <!-- Misión -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl text-center font-bold text-gray-800 mb-4">Misión</h2>
+            <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at lectus nec nulla suscipit tempus vel non
+                eros. Proin non justo vitae erat interdum tristique quis ac nisl.
+            </p>
+        </section>
+
+        <!-- Visión -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl text-center font-bold text-gray-800 mb-4">Visión</h2>
+            <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at ante at dolor euismod eleifend
+                quis at arcu. Sed auctor ante id risus porttitor, in vestibulum felis interdum.
+            </p>
+        </section>
+
+        <!-- Valores -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl text-center font-bold text-gray-800 mb-4">Valores</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Integridad</li>
+                <li>Responsabilidad</li>
+                <li>Innovación</li>
+                <li>Trabajo en equipo</li>
+                <li>Orientación al cliente</li>
+            </ul>
+        </section>
+
+        <!-- Equipo -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl text-center font-bold text-gray-800 mb-4">Equipo</h2>
+            <p class="text-gray-700">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum nunc id turpis ultricies, a
+                tincidunt justo tincidunt. Sed condimentum, orci in tincidunt euismod, justo orci cursus nisi, vel
+                mollis
+                velit turpis id purus.
+            </p>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 text-black p-3 text-center">
+        <p>&copy; 2024 Lore Pemsun</p>
+    </footer>
+
+
+    <script>
+        // JavaScript para mostrar/ocultar el menú desplegable en móviles
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

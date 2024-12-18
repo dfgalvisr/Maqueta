@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/base.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 flex items-center">
+        <!-- Título de la empresa -->
+        <a href="./dashboard.html" class="flex items-center">
+            <h1 class="text-lg font-bold text-gray-800">EMPRESA X</h1>
+        </a>
+        <!-- Separador vertical -->
+        <div class=" border-l border-gray-300 h-6 mx-4"></div>
+        <!-- Miga de pan -->
+        <nav class="flex items-center text-sm text-gray-600 space-x-2">
+            <a href="../dashboard.html" class="hover:underline">Inicio</a>
+            <span>/</span>
+            <a href="../users.html" class="hover:underline">Usuarios</a>
+            <span>/</span>
+            <span class="text-gray-800">Agregar</span>
+        </nav>
+    </header>
+
+    <!-- Header para dispositivos móviles -->
+    <header class="md:hidden bg-gray-800 text-white p-4 flex justify-between items-center">
+        <h1 class="text-lg font-semibold">Dashboard</h1>
+        <button id="menuToggle" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside id="sidebar"
+            class="w-64 bg-gray-800 text-white p-5 h-screen rounded-lg md:static absolute md:translate-x-0 -translate-x-full transition-transform duration-300 ease-in-out z-50">
+            <h2 class="text-xl font-semibold mb-4">Menú</h2>
+            <nav class="flex flex-col space-y-3">
+                <a href="../contracts.html" class="block py-2 px-4 rounded hover:bg-gray-700">Contratos</a>
+                <a href="../documents.html" class="block py-2 px-4 rounded hover:bg-gray-700">Documentos</a>
+                <a href="../logs.html" class="block py-2 px-4 rounded hover:bg-gray-700">Logs</a>
+                <a href="../reports.html" class="block py-2 px-4 rounded hover:bg-gray-700">Reportes</a>
+                <a href="../users.html" class="block py-2 px-4 rounded hover:bg-gray-700">Usuarios</a>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="flex-1 p-6">
+
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4">Datos Básicos</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Tipo de documento -->
+                    <div>
+                        <label for="tipoDocumento" class="block text-sm font-medium text-gray-700">Tipo de
+                            documento</label>
+                        <select id="tipoDocumento"
+                            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="CC">C.C</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                            <option value="NIT">NIT</option>
+                        </select>
+                    </div>
+
+                    <!-- Número de documento -->
+                    <div>
+                        <label for="numeroDocumento" class="block text-sm font-medium text-gray-700">Número de
+                            documento</label>
+                        <input type="text" id="numeroDocumento"
+                            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+
+                    <!-- Nombre -->
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input type="text" id="nombre"
+                            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+
+                    <!-- Rol -->
+                    <div>
+                        <label for="rol" class="block text-sm font-medium text-gray-700">Rol</label>
+                        <select id="rol"
+                            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="Cliente">cliente</option>
+                            <option value="Analista">Análista</option>
+                            <option value="Administrador">Administrador</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md mt-6">
+                <h2 class="text-2xl font-semibold mb-4">Datos de Contacto</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Nombre del contacto -->
+                    <div>
+                        <label for="nombreContacto" class="block text-sm font-medium text-gray-700">Nombre del
+                            contacto</label>
+                        <input type="text" id="nombreContacto"
+                            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+
+                    <div>
+                        <label for="direccionContacto" class="block text-sm font-medium text-gray-700">Dirección</label>
+                        <input type="text" id="direccionContacto"
+                            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div>
+                        <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                        <input type="tel" id="telefono"
+                            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="123-456-7890" />
+                    </div>
+
+                    <!-- Correo -->
+                    <div>
+                        <label for="correo" class="block text-sm font-medium text-gray-700">Correo</label>
+                        <input type="email" id="correo"
+                            class="mt-1 block w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="nombre@dominio.com" />
+                    </div>
+                </div>
+            </div>
+            <!-- Botón Guardar -->
+            <div class="flex justify-center mt-6">
+                <button
+                    class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    Guardar
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Overlay para el menú móvil -->
+    <div id="menuOverlay"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden md:hidden transition-opacity duration-300 ease-in-out z-40">
+    </div>
+
+    <!-- Script para el menú móvil -->
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("menuOverlay");
+
+        menuToggle.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+            overlay.classList.toggle("hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        });
+    </script>
+</body>
+
+</html>

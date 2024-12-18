@@ -1,0 +1,12 @@
+body {
+  overflow: auto;
+}
+
+footer {
+  background-color: darkgray; /* Color de fondo del footer */
+  text-align: left;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Ancho completo */
+}
